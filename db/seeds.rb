@@ -1,7 +1,7 @@
 ### This file should contain all the record creation needed to seed the database with its default values.
 ### The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 
-conferences = Conference.create([{ name: 'GoRuCo' }, { name: 'RubyNation 2013' }, { name: 'LoneStar RubyConf 2013' } }])
+conferences = Conference.create([{ name: 'GoRuCo' }, { name: 'RubyNation 2013' }, { name: 'LoneStar RubyConf 2013' }])
   # need to add start_date and end_date
 
 tracks = Track.create([{ title: 'Refactoring', description: 'Talks about how to clean up your code', location: 'Banquet Hall' },
