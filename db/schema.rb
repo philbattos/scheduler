@@ -14,34 +14,36 @@
 ActiveRecord::Schema.define(:version => 20130616181826) do
 
   create_table "conferences", :force => true do |t|
+    t.string   "slug"
     t.string   "name"
+    t.string   "location"
     t.datetime "start_date"
     t.datetime "end_date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
+  add_index "conferences", ["slug"], :name => "index_conferences_on_slug"
+
   create_table "sessions", :force => true do |t|
+    t.integer  "tracks_id"
     t.string   "title"
     t.string   "description"
-    t.string   "topic_one"
-    t.string   "topic_two"
-    t.string   "topic_three"
     t.string   "speaker"
     t.string   "location"
-    t.date     "date"
-    t.time     "start_time"
-    t.time     "end_time"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
   create_table "tracks", :force => true do |t|
+    t.integer  "conferences_id"
     t.string   "title"
     t.string   "description"
     t.string   "location"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
 end
