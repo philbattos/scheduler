@@ -9,12 +9,12 @@ class ConferencesController < ApplicationController
   end
 
   # # GET /conferences/1
-  # # GET /conferences/1.json
-  # def show
-  #   @conference = Conference.find(params[:id])
+  # GET /conferences/1.json
+  def show
+    @conference = Conference.find(params[:id])
 
-  #   render json: @conference
-  # end
+    render json: @conference
+  end
 
   # # POST /conferences
   # # POST /conferences.json

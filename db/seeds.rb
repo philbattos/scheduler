@@ -4,19 +4,19 @@
 conferences = Conference.create([{ name: 'GoRuCo' }, { name: 'RubyNation 2013' }, { name: 'LoneStar RubyConf 2013' }])
   # need to add start_date and end_date
 
-tracks = Track.create([{ conferences_id: 1, title: 'Refactoring', description: 'Talks about how to clean up your code', location: 'Banquet Hall' },
-                       { conferences_id: 1, title: 'Testing', description: 'Talks about how to write efficient tests', location: 'Auditorium' },
-                       { conferences_id: 2, title: 'APIs', description: 'Presentations about creating APIs', location: 'Conference Room: Oak' },
-                       { conferences_id: 3, title: 'Code Review', description: 'Ruby veterans available for live code reviews', location: 'Lobby' }
+tracks = Track.create([{ conference_id: 1, title: 'Refactoring', description: 'Talks about how to clean up your code', location: 'Banquet Hall' },
+                       { conference_id: 1, title: 'Testing', description: 'Talks about how to write efficient tests', location: 'Auditorium' },
+                       { conference_id: 2, title: 'APIs', description: 'Presentations about creating APIs', location: 'Conference Room: Oak' },
+                       { conference_id: 3, title: 'Code Review', description: 'Ruby veterans available for live code reviews', location: 'Lobby' }
                        ])
   # need to add conference_id field
 
-sessions = Session.create([{ tracks_id: 1, title: 'Refactoring Classes', description: 'Make your classes leaner', speaker: 'Katrina Owen', location: 'Room 413' },
-                           { tracks_id: 1, title: 'Refactoring Methods', description: 'Make your methods clear', speaker: 'Frank Weber', location: 'Room 413' },
-                           { tracks_id: 1, title: 'Refactoring Controllers', description: 'Keep your controllers concise', speaker: 'TBD', location: 'Room 413'},
-                           { tracks_id: 2, title: 'Testing Basics', description: 'How to start testing', speaker: 'TBD', location: 'Room 413'},
-                           { tracks_id: 2, title: 'Testing Tricks', description: 'Some little-known techniques for RSpec', speaker: 'TBD', location: 'Room 413'},
-                           { tracks_id: 2, title: 'The Joy of Failing Tests', description: 'What failing tests tell you about your app', speaker: 'TBD', location: 'Room 413'},
+sessions = Session.create([{ track_id: 1, title: 'Refactoring Classes', description: 'Make your classes leaner', speaker: 'Katrina Owen', location: 'Room 413' },
+                           { track_id: 1, title: 'Refactoring Methods', description: 'Make your methods clear', speaker: 'Frank Weber', location: 'Room 413' },
+                           { track_id: 1, title: 'Refactoring Controllers', description: 'Keep your controllers concise', speaker: 'TBD', location: 'Room 413'},
+                           { track_id: 2, title: 'Testing Basics', description: 'How to start testing', speaker: 'TBD', location: 'Room 413'},
+                           { track_id: 2, title: 'Testing Tricks', description: 'Some little-known techniques for RSpec', speaker: 'TBD', location: 'Room 413'},
+                           { track_id: 2, title: 'The Joy of Failing Tests', description: 'What failing tests tell you about your app', speaker: 'TBD', location: 'Room 413'},
                            ])
   # need to add track_id field
   # need to add date, start_time, and end_time data

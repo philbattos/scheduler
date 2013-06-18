@@ -1,7 +1,7 @@
 class CreateTracks < ActiveRecord::Migration
   def change
     create_table :tracks do |t|
-      t.references :conferences
+      t.references :conference
       t.string :title
       t.string :description
       t.string :location
