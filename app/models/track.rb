@@ -3,4 +3,10 @@ class Track < ActiveRecord::Base
 
   belongs_to :conference
   has_many :sessions
+
+  def serializable_hash(options = {})
+    super.tap do |data|
+      data[:sessions] = sessions.all
+    end
+  end
 end

@@ -3,4 +3,11 @@ class Conference < ActiveRecord::Base
 
   has_many :tracks
   validates_presence_of :name, :slug, :start_date, :end_date
+
+  def serializable_hash(options = {})
+    super.tap do |data|
+      data[:tracks] = tracks.all
+    end
+  end
+
 end
