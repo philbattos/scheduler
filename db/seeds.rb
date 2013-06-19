@@ -1,17 +1,17 @@
 ### This file should contain all the record creation needed to seed the database with its default values.
 ### The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 
-conferences = Conference.create([{ name: 'GoRuCo' }, { name: 'RubyNation 2013' }, { name: 'LoneStar RubyConf 2013' }])
+conferences = Conference.create!([{ name: 'GoRuCo', start_date: DateTime.new(2011,2,3), end_date: DateTime.new(2011,2,5), slug: 'goruco-2011' }, { name: 'RubyNation 2013', start_date: DateTime.new(2011,2,3), end_date: DateTime.new(2011,2,5), slug: 'ruby-nation-2011' }, { name: 'LoneStar RubyConf 2013', start_date: DateTime.new(2011,2,3), end_date: DateTime.new(2011,2,5), slug: 'lonestar-ruby-2011' }])
   # need to add start_date and end_date
 
-tracks = Track.create([{ conference_id: 1, title: 'Refactoring', description: 'Talks about how to clean up your code', location: 'Banquet Hall' },
+tracks = Track.create!([{ conference_id: 1, title: 'Refactoring', description: 'Talks about how to clean up your code', location: 'Banquet Hall' },
                        { conference_id: 1, title: 'Testing', description: 'Talks about how to write efficient tests', location: 'Auditorium' },
                        { conference_id: 2, title: 'APIs', description: 'Presentations about creating APIs', location: 'Conference Room: Oak' },
                        { conference_id: 3, title: 'Code Review', description: 'Ruby veterans available for live code reviews', location: 'Lobby' }
                        ])
   # need to add conference_id field
 
-sessions = Session.create([{ track_id: 1, title: 'Refactoring Classes', description: 'Make your classes leaner', speaker: 'Katrina Owen', location: 'Room 413' },
+sessions = Session.create!([{ track_id: 1, title: 'Refactoring Classes', description: 'Make your classes leaner', speaker: 'Katrina Owen', location: 'Room 413' },
                            { track_id: 1, title: 'Refactoring Methods', description: 'Make your methods clear', speaker: 'Frank Weber', location: 'Room 413' },
                            { track_id: 1, title: 'Refactoring Controllers', description: 'Keep your controllers concise', speaker: 'TBD', location: 'Room 413'},
                            { track_id: 2, title: 'Testing Basics', description: 'How to start testing', speaker: 'TBD', location: 'Room 413'},
