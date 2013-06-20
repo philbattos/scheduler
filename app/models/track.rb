@@ -4,6 +4,8 @@ class Track < ActiveRecord::Base
   belongs_to :conference
   has_many :sessions
 
+  validates_presence_of :title, :conference_id, :description, :location
+
   def serializable_hash(options = {})
     super.tap do |data|
       data[:sessions] = sessions.all
