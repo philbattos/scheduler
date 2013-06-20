@@ -5,8 +5,6 @@ class Track < ActiveRecord::Base
   has_many :sessions
 
   def serializable_hash(options = {})
-    super.tap do |data|
-      data[:sessions] = sessions.all
-    end
+    super.merge(sessions: sessions.all)
   end
 end
