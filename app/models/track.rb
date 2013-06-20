@@ -7,8 +7,6 @@ class Track < ActiveRecord::Base
   validates_presence_of :title, :conference_id, :description, :location
 
   def serializable_hash(options = {})
-    super.tap do |data|
-      data[:sessions] = sessions.all
-    end
+    super.merge(sessions: sessions.all)
   end
 end

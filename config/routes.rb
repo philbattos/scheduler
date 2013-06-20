@@ -1,9 +1,8 @@
 Scheduler::Application.routes.draw do
 
-  resources :sessions, except: [:new, :edit]
-  resources :tracks, except: [:new, :edit]
-
-  resources :conferences, except: [:new, :edit, :show]
+  resources :sessions, only: [:index]
+  resources :tracks, only: [:index, :show]
+  resources :conferences, only: [:index]
   get "/conferences/:slug", to: "conferences#show"
 
 end
