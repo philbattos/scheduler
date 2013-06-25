@@ -30,4 +30,28 @@ describe Conference do
     expect(@conference).to have(1).errors_on(:end_date)
   end
 
+  xit 'responds to a request with the correct conference id' do
+    expect(@conference[:id]).to eq(1)
+  end
+
+  it 'responds to a request with the correct conference name' do
+    expect(@conference[:name]).to eq("RubyConf 2013")
+  end
+
+  it 'responds to a request with the correct conference slug' do
+    expect(@conference[:slug]).to eq("ruby-conf-2013")
+  end
+
+  xit 'responds to a request with the correct conference start_date' do
+    expect(@conference[:start_date]).to eq(Date.new)
+  end
+
+  xit 'responds to a request with the correct conference end_date' do
+    expect(@conference[:end_date]).to eq(Date.new)
+  end
+
+  xit 'responds to a request with associated Tracks title' do
+    expect(@conferenc.track[:title]).to eq()
+  end
+
 end

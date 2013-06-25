@@ -29,4 +29,25 @@ describe Track do
     @track.location = nil
     expect(@track).to have(1).errors_on(:location)
   end
+
+  xit 'responds to a request with Track id' do
+    expect(@track[:id]).to eq(1)
+  end
+
+  it 'responds to a request with Track title' do
+    expect(@track[:title]).to eq("Refactoring")
+  end
+
+  it 'responds to a request with conference id' do
+    expect(@track[:conference_id]).to eq(1)
+  end
+
+  it 'responds to a request with Track description' do
+    expect(@track[:description]).to eq("hello, is this the test you're looking for?")
+  end
+
+  it 'responds to a request with Track location' do
+    expect(@track[:location]).to eq("The RSpec Brain")
+  end
+
 end
