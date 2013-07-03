@@ -111,20 +111,6 @@ sessions = Session.create!([{ track_id: 1, title: 'Refactoring Classes', descrip
                             { track_id: 13, title: 'Traveline', description: 'Making group travel more interactive', speaker: 'gSchool students', location: 'Conference Room East', start_time: DateTime.new(2013,11,8,14,30), end_time: DateTime.new(2013,11,8,14,45) },
                             { track_id: 13, title: 'Trivia', description: 'Play against your friends at the bar', speaker: 'gSchool students', location: 'Conference Room East', start_time: DateTime.new(2013,11,8,14,45), end_time: DateTime.new(2013,11,8,15,00) },
 
-                            { track_id: 13, title: 'BackChannel II', description: 'Enhancing the conference experience with chat, Q&A, and schedule', speaker: 'Raph, Jen, Kareem, Phil', location: 'Conference Room East', start_time: DateTime.new(2013,11,8,9), end_time: DateTime.new(2013,11,8,10) },
-                            { track_id: 13, title: 'Traveline II', description: 'Making group travel more interactive', speaker: 'gSchool students', location: 'Conference Room East', start_time: DateTime.new(2013,11,8,10), end_time: DateTime.new(2013,11,8,11) },
-                            { track_id: 13, title: 'Trivia II', description: 'Play against your friends at the bar', speaker: 'gSchool students', location: 'Conference Room East', start_time: DateTime.new(2013,11,8,11), end_time: DateTime.new(2013,11,8,12) },
-
-                            { track_id: 50, title: '[A group project]', description: 'What failing tests tell you about your app', speaker: 'TBD', location: 'Conference Room East'},
-                            { track_id: 50, title: '[A group project]', description: 'What failing tests tell you about your app', speaker: 'TBD', location: 'Conference Room East'},
-                            { track_id: 50, title: '[A group project]', description: 'What failing tests tell you about your app', speaker: 'TBD', location: 'Conference Room East'},
-                            { track_id: 50, title: '[A group project]', description: 'What failing tests tell you about your app', speaker: 'TBD', location: 'Conference Room East'},
-                            { track_id: 50, title: '[A group project]', description: 'What failing tests tell you about your app', speaker: 'TBD', location: 'Conference Room East'},
-                            { track_id: 50, title: '[A group project]', description: 'What failing tests tell you about your app', speaker: 'TBD', location: 'Conference Room East'},
-                            { track_id: 50, title: '[A group project]', description: 'What failing tests tell you about your app', speaker: 'TBD', location: 'Conference Room East'},
-                            { track_id: 50, title: '[A group project]', description: 'What failing tests tell you about your app', speaker: 'TBD', location: 'Conference Room East'},
-                            { track_id: 50, title: '[A group project]', description: 'What failing tests tell you about your app', speaker: 'TBD', location: 'Conference Room East'},
-                            { track_id: 50, title: '[A group project]', description: 'What failing tests tell you about your app', speaker: 'TBD', location: 'Conference Room East'},
                             ])
   # need to add track_id field
   # need to add date, start_time, and end_time data
